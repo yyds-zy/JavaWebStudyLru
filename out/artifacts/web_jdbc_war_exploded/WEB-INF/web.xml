@@ -33,4 +33,44 @@
         <servlet-name>CheckServlet</servlet-name>
         <url-pattern>/checkServlet</url-pattern>
     </servlet-mapping>
+
+<!--    <filter>-->
+<!--        <filter-name>ParamsFilter</filter-name>-->
+<!--        <filter-class>com.study.jdbc.filter.ParamsFilter</filter-class>-->
+<!--        <init-param>-->
+<!--            <param-name>param</param-name>-->
+<!--            <param-value>jdbc</param-value>-->
+<!--        </init-param>-->
+<!--    </filter>-->
+<!--    <filter-mapping>-->
+<!--        <filter-name>ParamsFilter</filter-name>-->
+<!--        <url-pattern>/*</url-pattern>-->
+<!--    </filter-mapping>-->
+
+
+<!--    <filter>-->
+<!--        <filter-name>UrlsFilter</filter-name>-->
+<!--        <filter-class>com.study.jdbc.filter.UrlsFilter</filter-class>-->
+<!--        <init-param>-->
+<!--            <param-name>url</param-name>-->
+<!--            <param-value>www.baidu.com</param-value>-->
+<!--        </init-param>-->
+<!--    </filter>-->
+<!--    <filter-mapping>-->
+<!--        <filter-name>UrlsFilter</filter-name>-->
+<!--        <url-pattern>/*</url-pattern>-->
+<!--    </filter-mapping>-->
+
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>com.study.jdbc.filter.EncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 </web-app>

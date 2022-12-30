@@ -59,11 +59,11 @@ public class LoginServlet extends HttpServlet {
 
         String forward = null;
 
-        if (username.equals("Jack") && password.equals("123456")) {
-            forward = "https://www.baidu.com";
-//            RequestDispatcher requestDispatcher = req.getRequestDispatcher(forward);
-//            requestDispatcher.forward(req,resp);
-            resp.sendRedirect(forward);
+        if (username.equals("中国") && password.equals("123456")) {
+            forward = "/success.jsp";
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher(forward);
+            requestDispatcher.forward(req,resp);
+      //      resp.sendRedirect(forward);
         } else {
 //            resp.sendRedirect(req.getContextPath() + "/error.jsp");
             forward = "/error.jsp";
